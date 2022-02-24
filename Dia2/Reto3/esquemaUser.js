@@ -43,7 +43,8 @@ const userSchema = new mongoose.Schema({
            "Debe introducir un email válido"
        ] 
     },
-    follow: ObjectId
+    follow: [ObjectId],
+    fotos: [{type: mongoose.Schema.Types.ObjectId, ref: "Photo"}]
 
 });
 
